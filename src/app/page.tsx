@@ -1,6 +1,4 @@
-"use client"
-
-export default function FrontPage()
+export default function Home()
 {
   return (
     <div>

@@ -1,8 +1,9 @@
 "use client"
 
+import Header from "./components/header";
+
 export default function Home()
    {
-   const isLoggedIn = true;
 
    const itemsDaLista = [
       { id: 1, text: "Primeiro item da lista dinâmica" },
@@ -16,108 +17,118 @@ export default function Home()
    };
 
    return (
-      <main 
-         style={{ padding: '2rem', fontFamily: 'sans-serif' }}
-      >
+      <html>
+         <body>
 
-         <h1>Matheus Reich</h1>
-         
-         <hr /> {/* linha que corta a tela */}
+            <header>
+               {<Header/>}
+            </header>
 
-         <h2>Seção de Atributos e Estilo</h2>
+            <main 
+               style={{ padding: '2rem', fontFamily: 'sans-serif' }}
+            >
 
-         <div 
-            id="div-unica" 
-            className="container-principal" 
-            style={{ backgroundColor: '#f0f0f0', padding: '15px', borderRadius: '8px' }}
-         >
-            Esta é uma div com ID, classe e estilo inline.
-         </div>
+               <h1>Matheus Reich</h1>
+               
+               <hr />
 
-         <hr />
+               <h2>Seção de Atributos e Estilo</h2>
 
-         <h2>Seção de Listas</h2>
+               <div 
+                  id="div-unica" 
+                  className="container-principal" 
+                  style={{ backgroundColor: '#f0f0f0', padding: '15px', borderRadius: '8px' }}
+               >
+                  Esta é uma div com ID, classe e estilo inline.
+               </div>
 
-         <h3>Itens que preciso fazer:</h3>
+               <hr />
 
-         <ul>
-            <li>Aprender mais sobre Next.js</li>
-            <li>Construir um portfólio incrível</li>
-            <li><strong>Dar um commit neste progresso!</strong></li>
-         </ul>
+               <h2>Seção de Listas</h2>
 
-         <h3>Passos para o sucesso:</h3>
+               <h3>Itens que preciso fazer:</h3>
 
-         <ol>
-            <li>Planejar</li>
-            <li>Codificar</li>
-            <li><em>Testar e Refatorar</em></li>
-            <li>Publicar!</li>
-         </ol>
+               <ul>
+                  <li>Aprender mais sobre Next.js</li>
+                  <li>Construir um portfólio incrível</li>
+                  <li><strong>Dar um commit neste progresso!</strong></li>
+               </ul>
 
-         <hr />
+               <h3>Passos para o sucesso:</h3>
 
-         <h2>Links e Imagens</h2>
+               <ol>
+                  <li>Planejar</li>
+                  <li>Codificar</li>
+                  <li><em>Testar e Refatorar</em></li>
+                  <li>Publicar!</li>
+               </ol>
 
-         <a 
-            href="https://github.com/math-reich" 
-            target="_blank" 
-            rel="noopener noreferrer"
-         >
-            Meu Perfil no GitHub (abre em nova aba)
-         </a>
-         
-         <br />
+               <hr />
 
-         <img 
-            src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" 
-            alt="Logo do GitHub"
-            width="100"
-            style={{ marginTop: '1rem' }}
-         />
-         
-         <hr />
+               <h2>Links e Imagens</h2>
 
-         {/* Interatividade: Botões e Eventos */}
-         <h2>Interatividade</h2>
+               <a 
+                  href="https://github.com/math-reich" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+               >
+                  Meu Perfil no GitHub (abre em nova aba)
+               </a>
+               
+               <br />
 
-         <button onClick={handleButtonClick}>
-            Clique em Mim!
-         </button>
+               <img 
+                  src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" 
+                  alt="Logo do GitHub"
+                  width="100"
+                  style={{ marginTop: '1rem' }}
+               />
+               
+               <hr />
 
-         <hr />
+               {/* Interatividade: Botões e Eventos */}
+               <h2>Interatividade</h2>
 
-         {/* Formulários Simples */}
-         <h2>Formulários</h2>
+               <button onClick={handleButtonClick}>
+                  Clique em Mim!
+               </button>
 
-         <div>
-            <label htmlFor="nome-usuario">Nome de Usuário: </label>
-            <input 
-               type="text" 
-               id="nome-usuario"
-               placeholder="Digite seu nome..."
-            />
-         </div>
+               <hr />
 
-         <div style={{ marginTop: '0.5rem' }}>
-            <input type="checkbox" id="lembrar-me" defaultChecked={true} />
-            <label htmlFor="lembrar-me"> Lembrar de mim</label>
-         </div>
+               {/* Formulários Simples */}
+               <h2>Formulários</h2>
 
-         <hr />
+               <div>
+                  <label htmlFor="nome-usuario">Nome de Usuário: </label>
+                  <input 
+                     type="text" 
+                     id="nome-usuario"
+                     placeholder="Digite seu nome..."
+                  />
+               </div>
 
-         {/* Renderizando uma lista a partir de um array (o jeito React!) */}
-         <h3>Lista de Itens Dinâmicos:</h3>
-         <ul>
-         {itemsDaLista.map(item => (
-            // A prop 'key' é essencial para o React otimizar a lista.
-            // Use sempre um ID único do seu dado para a key.
-            <li key={item.id}>
-               {item.text}
-            </li>
-         ))}
-         </ul>
+               <div style={{ marginTop: '0.5rem' }}>
+                  <input type="checkbox" id="lembrar-me" defaultChecked={true} />
+                  <label htmlFor="lembrar-me"> Lembrar de mim</label>
+               </div>
 
-      </main>
+               <hr />
+
+               {/* Renderizando uma lista a partir de um array (o jeito React!) */}
+               <h3>Lista de Itens Dinâmicos:</h3>
+               <ul>
+               {itemsDaLista.map(item => (
+                  // A prop 'key' é essencial para o React otimizar a lista.
+                  // Use sempre um ID único do seu dado para a key.
+                  <li key={item.id}>
+                     {item.text}
+                  </li>
+               ))}
+               </ul>
+
+            </main>
+      
+         </body>
+      </html>
    );
 }

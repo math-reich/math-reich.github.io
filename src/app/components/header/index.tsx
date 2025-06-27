@@ -8,6 +8,7 @@ export default function Header()
             style={{backgroundColor: "purple", width:"100%", height:"25px"}}
          >
             <a>MATHEUS</a>
+            <hr />
          </div>
       </>
    )

@@ -2,7 +2,6 @@
 
 export default function Home()
    {
-   const userName = "Math";
    const isLoggedIn = true;
 
    const itemsDaLista = [
@@ -21,8 +20,7 @@ export default function Home()
          style={{ padding: '2rem', fontFamily: 'sans-serif' }}
       >
 
-         <h1>Bem-vindo ao Meu Portfólio, {userName}!</h1>
-         <p>Este é um parágrafo de exemplo para mostrar como o texto flui.</p>
+         <h1>Matheus Reich</h1>
          
          <hr /> {/* linha que corta a tela */}
 
